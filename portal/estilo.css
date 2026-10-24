@@ -1,0 +1,45 @@
+
+:root{--tinta:#111418;--tinta2:#1E232A;--papel:#F4F1EA;--papel2:#FBF9F4;--gris:#5E6670;--ocre:#C9A227;--linea:#DDD7CA}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.65 'Manrope',system-ui,sans-serif}
+a{color:inherit}img{max-width:100%;display:block}
+.cab{background:var(--tinta);color:var(--papel);border-bottom:4px solid var(--ocre)}
+.cab .in{max-width:1120px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.sello{background:var(--ocre);color:var(--tinta);font:700 24px/1 'Barlow Condensed','Oswald',sans-serif;padding:7px 9px 6px;border-radius:6px;letter-spacing:.5px}
+.logo b{font:800 26px/1 'Manrope',sans-serif;color:var(--papel)}.logo img{height:46px;width:46px}
+.nav{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto;font:500 13px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.nav a{text-decoration:none;color:#C9CED4}.nav a:hover{color:var(--ocre)}
+.fecha{max-width:1120px;margin:0 auto;padding:10px 16px;font:13px 'Barlow Condensed',sans-serif;color:var(--gris);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--linea)}
+main{max-width:1120px;margin:0 auto;padding:20px 16px 48px}
+.chip{display:inline-block;font:600 12px/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1px;color:#fff;padding:5px 8px;border-radius:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.card{background:var(--papel2);border:1px solid var(--linea);border-radius:6px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column}
+.card img{aspect-ratio:16/9;object-fit:cover;width:100%;background:var(--tinta2)}
+.card .tx{padding:14px 16px 16px}.card h3{font-size:20px;line-height:1.25;margin:8px 0 6px}
+.card p{margin:0;color:var(--gris);font-size:15px;line-height:1.5}
+.card small{display:block;margin-top:10px;color:var(--gris);font:12px 'Barlow Condensed',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.destacada{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-bottom:30px;text-decoration:none}
+.destacada img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+.destacada h2{font-size:34px;line-height:1.15;margin:10px 0}
+.destacada p{color:var(--gris)}
+h1.sec{font-size:30px;margin:6px 0 20px;border-bottom:3px solid var(--tinta);padding-bottom:8px}
+article{max-width:740px;margin:0 auto}
+article h1{font-size:38px;line-height:1.12;font-weight:800;margin:12px 0 10px}
+article .entrada{font-size:20px;color:var(--gris);margin:0 0 14px}
+article .meta{font:13px 'Barlow Condensed',sans-serif;color:var(--gris);text-transform:uppercase;letter-spacing:1px;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:8px 0;margin-bottom:22px}
+article h2{font-size:24px;margin:30px 0 8px}
+.video{position:relative;margin:0 auto 24px;background:#000;border-radius:6px;overflow:hidden}
+.video.v{max-width:360px;aspect-ratio:9/16}.video.h{aspect-ratio:16/9}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fuentes{background:var(--papel2);border:1px solid var(--linea);border-left:4px solid var(--ocre);padding:14px 18px;margin-top:30px;font-size:15px}
+.fuentes h3{margin:0 0 8px;font:600 14px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.fuentes li{margin:4px 0;overflow-wrap:anywhere}
+.cred{font-size:12px;color:var(--gris);white-space:pre-line;margin-top:14px;overflow-wrap:anywhere}
+a.tg{display:block;background:#D63A2F;color:#fff;text-align:center;font-weight:700;font-size:14px;padding:9px 12px;text-decoration:none}
+.pie{background:var(--tinta);color:#9AA1A9;font-size:14px}
+.pie .in{max-width:1120px;margin:0 auto;padding:26px 16px}
+.pie a{color:var(--papel)}
+@media(max-width:760px){.destacada{grid-template-columns:1fr}.destacada h2{font-size:26px}article h1{font-size:29px}.nav{margin-left:0}}
+@media(prefers-color-scheme:dark){:root{--papel:#15181D;--papel2:#1C2027;--tinta:#0B0D10;--gris:#9AA1A9;--linea:#2C323A}
+body{color:#ECE8DF}.card h3,.destacada h2,article h1,article h2{color:#F4F1EA}h1.sec{border-color:#F4F1EA}}
