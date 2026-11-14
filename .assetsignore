@@ -1,0 +1,10 @@
+.git
+.git/**
+.nojekyll
+CNAME
+README.md
+wrangler.jsonc
+.assetsignore
+**/*.lock
+portal/data
+portal/data/**
