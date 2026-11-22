@@ -1,0 +1,17 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000
+/img/*
+  Cache-Control: public, max-age=86400
+/js/*
+  Cache-Control: public, max-age=3600
+/estilo.css
+  Cache-Control: public, max-age=300
+/api/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300
+/busqueda.json
+  Cache-Control: public, max-age=600

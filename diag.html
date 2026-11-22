@@ -1,0 +1,18 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Diagnóstico OKpolítico</title>
+<style>body{font:16px system-ui,sans-serif;padding:16px;background:#fff;color:#111}b.ok{color:#0a7a2f}b.no{color:#c8102e}li{margin:8px 0;word-break:break-all}</style></head>
+<body><h2>Diagnóstico de carga</h2><p id="u"></p><ul id="r"></ul>
+<p>Logo relativo: <img src="img/emblema.png" width="40" onload="m('img relativa','ok')" onerror="m('img relativa','ERROR')"></p>
+<p>Logo absoluto: <img src="/img/emblema.png" width="40" onload="m('img absoluta','ok')" onerror="m('img absoluta','ERROR')"></p>
+<script>
+// [claude .leon 2026-11-21] página temporal: el celular del director no carga estilo.css ni el logo; mostrar en pantalla qué falla y por qué
+function m(k,v){var li=document.createElement('li');li.innerHTML=k+': <b class="'+(v.indexOf('ok')==0?'ok':'no')+'">'+v+'</b>';document.getElementById('r').appendChild(li)}
+document.getElementById('u').textContent=location.href+' · '+navigator.userAgent;
+['estilo.css','/estilo.css','https://okpolitico.com/estilo.css','estilo.css?v=1','img/emblema.png'].forEach(function(u){
+  var t=Date.now();
+  fetch(u,{cache:'no-store'}).then(function(r){return r.text().then(function(x){m('fetch '+u,'ok '+r.status+' '+(r.headers.get('content-type')||'')+' '+x.length+'B '+(Date.now()-t)+'ms · inicio: '+x.slice(0,40).replace(/</g,'&lt;'))})})
+  .catch(function(e){m('fetch '+u,'ERROR '+e+' ('+(Date.now()-t)+'ms)')});
+});
+var l=document.createElement('link');l.rel='stylesheet';l.href='estilo.css?d='+Date.now();l.onload=function(){m('link estilo.css','ok')};l.onerror=function(){m('link estilo.css','ERROR')};document.head.appendChild(l);
+if(navigator.serviceWorker)navigator.serviceWorker.getRegistrations().then(function(rs){m('service workers',rs.length+' '+rs.map(function(x){return x.scope}).join(','))});
+</script></body></html>
